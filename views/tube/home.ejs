@@ -212,7 +212,7 @@ document.getElementById("searchForm").addEventListener("submit", function(event)
 window.addEventListener("load", function() {
     const hometut = localStorage.getItem('homec');
     if (!hometut) {
-      showMessage("ようこそ！もし何か知りたい場合<a href='/blog/b/wkthelp' style='color: #60a5fa;'>ヘルプページ</a>を見てみて下さい。");
+      showMessage("ようこそ！もし何か知りたい場合<a href='/blog/b/mnthelp' style='color: #60a5fa;'>ヘルプページ</a>を見てみて下さい。");
       localStorage.setItem('homec', 'true');
     } else if(hometut === "true"){
       showMessage("youtubeだけではなく勉強もしましょう!");
