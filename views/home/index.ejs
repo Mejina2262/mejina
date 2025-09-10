@@ -1,1 +1,54 @@
-coming soon...
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>まのtubeの作者</title>
+    <style>
+        .profile-container {
+            width: 300px;
+            margin: 50px auto;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid #ddd;
+        }
+        .profile-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .profile-intro {
+            color: #555;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <%
+        const profile = {
+            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsJOUkkPBh_9N9NXN7pB2WNEuWmJZDj6K6Ug&s',
+            name: 'M.S',
+            introduction: 'WEB開発が趣味。javascript,pythonなど...推しは滅城レイラ。詳しくは検索を'
+        };
+    %>
+
+    <div class="profile-container">
+        <img src="<%= profile.imageUrl %>" alt="<%= profile.name %>のプロフィール画像" class="profile-image">
+        <h2 class="profile-name"><%= profile.name %></h2>
+        <p class="profile-intro"><%= profile.introduction %></p>
+    </div>
+
+</body>
+</html>
